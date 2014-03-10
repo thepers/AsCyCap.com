@@ -5,15 +5,16 @@ a
 body
 {
 	background: #EEEEEE;
-	font-family: Arial;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 }
 footer
 {
-	color: rgba(255,255,255,0.7);
 	background: #605B5F;
-	text-align: center;
+	color: rgba(255,255,255,0.7);
 	padding: 1em;
+	text-align: center;
+	
 }
 footer p:first-child
 {
@@ -41,63 +42,53 @@ header
 }
 header figure
 {
-	float: left;
+	float: right;
 }
 header h1
 {
-	font-size: 1.5em;
+	font-size: 1.2em;
 	font-weight: normal;
-	margin: 0.2em 70px 0 0;
+	margin: 0.3em 0em 0 1em;
 	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;
 }
 
 header #logo img
 {
-	border-right: 1px solid white;
-	margin-right: 0.5em;
-	padding-right: 0.5em;
+	border-left: 1px solid white;
+	margin-left: 0.7em;
+	padding-left: 0.5em;
 	width: 100px;
 }
 nav
 {
 	background: #80BCA3;
 	box-shadow: rgba(0,0,0,0.5) 0px 0px 10px;
-	padding: 0 0.5em;
 	position: relative;
 }
 nav ul
 {
 	list-style: none;
 	margin: 0;
-	padding: 0;
+	padding: 0 1em 0 1em;
 }
-nav ul #publicar_nav
-{
-	position: absolute;
-	top: -0.3em;
-	right: 0;
-}
-nav ul #publicar_nav a
-{
-	background: #3B6128;
-	border-radius: 15px;
-	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
-	font-style: italic;
-	padding: 0.8em 0.5em;
-	text-decoration: none;
-	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;
-}
+
 nav ul li
 {
 	display: inline-block;
-	margin: 0 1em 0 0;
+	margin: 0 0.5em 0 0;
 }
 nav ul li a
 {
 	color: white;
 	display: block;
-	padding: 0.5em 0;
+	padding: 0.5em;
+	text-decoration: none;
+	-webkit-transition:.3s;
 }
+nav ul li a:hover{
+	background: #8DD1B5;
+}
+
 #contenido
 {
 	margin: 1em;
@@ -151,19 +142,20 @@ nav ul li a
 	color: #444;
 	text-decoration: none;
 }
-#contenido .item .votacion
-{
-	background: white;
-	border-radius: 0 0 0.5em 0.5em;
-	left: 1%; 
-	margin-top: 3px;
-	padding: 0.2em 0.5em;
-	position: absolute;
-	top: 100%;
-	width: 95%;
-}
-#contenido .item .votacion .comentarios_item, 
-#contenido .item .votacion .guardar_item
-{
-	float: right;
+
+@media screen and (min-width: 800px){
+
+	#contenido
+	{
+		overflow: hidden;
+	}
+	#contenido .item 
+	{
+		width: 49%;
+		float: left;
+	}
+	#contenido .item:nth-child(odd){
+		margin-right: 2%;
+	}
+
 }
